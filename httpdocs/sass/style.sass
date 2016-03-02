@@ -1,0 +1,452 @@
+@import compass
+
+$blue: #04529b
+$ltblue: #0072bc
+$babyblue: #25a4f5
+$pink: #d81d93
+
+$serif: 'Alegreya SC', Tahoma, serif
+$sansserif: 'FunctionPro-Book', 'FunctionPro', Helvetica, Arial, sans-serif
+=transition($t)
+	transition: $t
+	-webkit-transition: $t
+	-moz-transition: $t
+	-o-transition: $t
+	-ms-transition: $t
+	
+=transform($t)
+	transform: $t
+	-webkit-transform: $t
+	-moz-transform: $t
+	-o-transform: $t
+	-ms-transform: $t
+
+@font-face
+	font-family: 'FunctionPro'
+	src: url('fonts/function-pro/medium/FunctionPro-Medium-webfont.eot')
+	src: url('fonts/function-pro/medium/FunctionPro-Medium-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/function-pro/medium/FunctionPro-Medium-webfont.woff') format('woff'),url('fonts/function-pro/medium/FunctionPro-Medium-webfont.ttf') format('truetype'),url('fonts/function-pro/medium/FunctionPro-Medium-webfont.svg#webfont') format('svg')
+	font-weight: normal
+	font-style: normal
+	
+@font-face
+	font-family: 'FunctionPro-Light'
+	src: url('fonts/function-pro/light/FunctionPro-Light-webfont.eot')
+	src: url('fonts/function-pro/light/FunctionPro-Light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/function-pro/light/FunctionPro-Light-webfont.woff') format('woff'),url('fonts/function-pro/light/FunctionPro-Light-webfont.ttf') format('truetype'),url('fonts/function-pro/light/FunctionPro-Light-webfont.svg#webfont') format('svg')
+	font-weight: normal
+	font-style: normal
+
+@font-face
+	font-family: 'FunctionPro-Bold'
+	src: url('fonts/function-pro/bold/FunctionPro-Bold-webfont.eot')
+	src: url('fonts/function-pro/bold/FunctionPro-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/function-pro/bold/FunctionPro-Bold-webfont.woff') format('woff'),url('fonts/function-pro/bold/FunctionPro-Bold-webfont.ttf') format('truetype'),url('fonts/function-pro/bold/FunctionPro-Bold-webfont.svg#webfont') format('svg')
+	font-weight: normal
+	font-style: normal
+
+@font-face
+	font-family: 'FunctionPro-Book'
+	src: url('fonts/function-pro/book/FunctionPro-Book-webfont.eot')
+	src: url('fonts/function-pro/book/FunctionPro-Book-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/function-pro/book/FunctionPro-Book-webfont.woff') format('woff'),url('fonts/function-pro/book/FunctionPro-Book-webfont.ttf') format('truetype'),url('fonts/function-pro/book/FunctionPro-Book-webfont.svg#webfont') format('svg')
+	font-weight: normal
+	font-style: normal
+
+p
+	font-size: 1em
+	margin: 0 0 .5em
+h5
+	margin: 0 0 .5em
+	font-size: .8em
+h4
+	margin: 0 0 .5em
+	font-size: 1em
+h3
+	margin: 0 0 .5em
+	font-size: 1.2em
+h2
+	margin: 0 0 .5em
+	font-size: 1.6em
+h1
+	margin: 0 0 .5em
+	font-size: 2em
+
+
+body:before
+	content: ''
+	width: 100%
+	height: 200px
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 0
+	background-repeat: repeat-x
+	background-size: auto 120%
+	background-image: url('/images/pawprints.svg')
+	background-position: right 100%
+	pointer-events: none
+	
+body:after
+	@extend body:before
+	height: 10vw
+	top: unset
+	bottom: 0
+	background-size: auto 10vw
+	background-position: right bottom
+	
+body
+	background: $blue
+	border-top: 20px solid #000
+	padding: 0
+	margin: 0
+	width: 100vw
+	overflow-x: hidden
+	min-height: 100vh
+	position: relative
+	float: left
+	font-size: 120%
+	font-family: $sansserif
+	
+#container
+	width: 100%
+	max-width: 1120px
+	margin: auto
+	
+#content
+	width: 100%
+	box-sizing: border-box
+	float: left
+	background: #fff
+	min-height: 400px
+	padding: 100px 40px
+	
+header
+	width: 100%
+	float: left
+	height: 100px
+	position: relative
+	z-index: 5
+	
+	#logo
+		width: 36.5%
+		max-height: 100px
+		float: left
+		margin: 20px 0 0
+	#right
+		float: left
+		width: 63.5%
+		#top
+			float: left
+			text-align: right
+			width: 100%
+			#phone
+				font-size: 1.6em
+				font-weight: bold
+				color: $ltblue
+				margin: 0 0 0 30px
+			.social
+				height: 20px
+				width: 20px
+				border-radius: 100%
+				display: inline-block
+				background-color: #7a7a7a
+				line-height: 20px
+				background-size: contain
+				background-position: center
+				background-repeat: no-repeat
+			#facebook
+				background-image: url('/images/social/fb.svg')
+				background-size: 40%
+			#twitter
+				background-image: url('/images/social/twitter.svg')
+				background-size: 80%
+			#pinterest
+				background-image: url('/images/social/pinterest.svg')
+				background-size: 60%
+			#instagram
+				background-image: url('/images/social/instagram.svg')
+				background-size: 60%
+			.social:hover
+				background-color: $pink
+				box-shadow: 2px 2px 3px $pink
+			.spacer
+				margin: 0 10px
+				line-height: 20px
+				display: inline-block
+				border-right: 2px solid #ececec
+				height: 10px
+				position: relative
+				bottom: 5px
+		#address
+			text-align: right
+			float: left
+			clear: right
+			width: 100%
+			.spacer
+				margin: 0 20px
+		nav#main
+			width: 100%
+			display: flex
+			font-family: $serif
+			z-index: 500
+			position: relative
+
+			>li
+				list-style-type: none
+				flex-grow: 1
+				display: inline-block
+				text-align: center
+				position: relative
+				font-size: 1.25em
+				font-weight: bold
+				a
+					text-decoration: none
+					color: $ltblue
+				ul.subnav
+					position: absolute
+					left: 0
+					top: 0
+					background-color: rgba(213, 14, 140, .7)
+					padding: 10px 0 0
+					display: none
+					li
+						
+						list-style-type: none
+						padding: 0 60px 0 30px
+						box-sizing: border-box
+						width: 100%
+						position: relative
+						float: left
+						height: 30px
+						line-height: 30px
+						//border-bottom: 3px solid rgba(0, 0, 0, .3)
+						text-align: left
+						a
+							color: #fff
+							float: left
+							width: 100%
+							white-space: nowrap
+					li:hover
+						color: #000
+						background-color: rgba(255, 255, 255, 1)
+						background-image: url('/images/black-paw.svg')
+						background-size: auto 20px
+						background-position: 5px
+						background-repeat: no-repeat
+						a
+							color: #000
+					li:hover:after
+						content: ''
+						width: 0
+						height: 0
+						border-style: solid
+						border-width: 30px 0 0 30px
+						border-color: transparent transparent transparent #ffffff
+						position: absolute
+						right: -30px
+				ul.subnav:hover
+					display: block
+							
+			>li:after
+				content: '.'
+				color: $ltblue
+				position: absolute
+				right: 0
+				top: 0
+			>li:last-of-type:after
+				content: none
+				display: none
+			>li:hover
+				a
+					color: $pink
+				ul.subnav
+					display: block
+				
+main
+	position: relative
+	width: 100%
+	float: left
+	min-height: 60vh
+	margin: 0 0 20px
+	article
+		width: 75%
+		box-sizing: border-box
+		padding: 10px 10px 0 0
+		float: left
+		section#slideshow
+			background: #000
+			height: 400px
+			width: 100%
+			float: left
+			text-align: center
+			position: relative
+			figure.slide
+				text-align: center
+				height: 100%
+				width: 100%
+				position: absolute
+				top: 0
+				left: 0
+				padding: 0
+				margin: 0
+				background: #000
+				img
+					height: 100%
+			figure.slide.active
+				z-index: 10
+			figure.slide.next
+				z-index: 9
+			figure.slide.last
+				z-index: 0
+		.flex-container
+			float: left
+			width: 100%
+			display: flex
+			margin: 20px 0 0
+			flex-wrap: wrap
+			button.bigbutton
+				padding: 0
+				margin: 0 0 20px
+				background-color: $blue
+				display: flex
+				flex: 1
+				border: none
+				border-radius: 0
+				color: #000
+				text-transform: uppercase
+				font-weight: bold
+				font-size: 1.8em
+				height: 87px
+				line-height: 87px
+				float: left
+				text-align: center 
+				background-repeat: no-repeat
+				background-size: auto 100%
+				background-image: url('/images/single-paw.svg')
+				span
+					width: 100%
+					text-align: center
+			button.bigbutton:nth-of-type(2)
+				border-right: 20px solid #fff
+				border-left: 20px solid #fff
+			button.bigbutton:hover
+				background-image: none
+				cursor: pointer
+				box-shadow: 2px 2px 3px #000 inset
+				color: #fff
+			.third
+				flex: 1
+				border-right: 10px solid #fff
+				max-width: 243.328px
+			.twothird
+				flex: 2
+				border-left: 10px solid #fff
+		.borderright
+			border-right: 1px solid #827d73
+			padding-right: 10px
+	aside
+		width: 25%
+		float: left
+		box-sizing: border-box
+		padding: 10px 0 0 10px
+		div
+			width: 100%
+			margin: 0 0 20px
+			float: left
+			p
+				font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
+				font-size: .9em
+				line-height: 1
+				color: #868686
+				width: 100%
+				text-align: right
+		img
+			width: 100%
+			float: left
+			margin: 0 0 20px
+		h3
+			font-variant: small-caps
+			color: #6b6b6b
+			font-family: $serif
+			font-size: 1.6em
+			text-align: right
+			width: 100%
+			letter-spacing: 1px
+			font-weight: normal
+		h4
+			font-size: 1.2em
+		div#testimonials
+			p
+				font-size: .8em
+				line-height: 1.4
+				color: #000
+				text-align: center
+			
+.accordion
+	.section
+		h4
+			margin: 0 0 10px
+			color: $pink
+			border-bottom: 2px solid $pink
+			padding: 0 0 0 30px
+			position: relative
+			cursor: pointer
+			font-variant: small-caps
+			width: 100%
+			box-sizing: border-box
+		h4:before
+			content: ''
+			height: 20px
+			width: 20px
+			position: absolute
+			left: 5px
+			top: -5px
+			background-image: url('/images/black-paw.svg')
+			background-size: contain
+			background-repeat: no-repeat
+		h4:hover:before
+			+transform(rotate(90deg))
+		.content
+			max-height: 0
+			margin: 0
+			overflow: hidden
+			+transition(all .5s)
+	.section.active
+		h4:before
+			+transform(rotate(90deg))
+		h4:hover:before
+			+transform(rotate(0deg))
+		.content
+			max-height: 300px
+			margin: 0 0 20px
+footer
+	position: relative
+	width: 100%
+	float: left
+	z-index: 5
+	text-align: center
+	nav#main
+		display: inline-block
+		float: none
+		font-family: $serif
+		>li
+			list-style-type: none
+			float: left
+			position: relative
+			font-size: 1.25em
+			font-weight: bold
+			a
+				text-decoration: none
+				color: $babyblue
+			ul.subnav
+				display: none
+		>li:after
+			content: '.'
+			color: $babyblue
+			float: right
+			width: 40px
+			text-align: center
+				
+		>li:last-of-type:after
+			content: none
+			display: none
+		>li:hover
+			a
+				color: $blue
